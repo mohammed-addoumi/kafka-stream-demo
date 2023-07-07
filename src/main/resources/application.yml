@@ -1,3 +1,13 @@
 spring:
   application:
     name: kafka-streams-demo
+
+  kafka:
+    streams:
+      bootstrap-servers: localhost:19092
+      default-key-serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+      default-value-serde: io.confluent.kafka.streams.serdes.avro.GenericAvroSerde
+      application-id: kafka-streams-demo
+      consumer:
+        auto-offset-reset: earliest
+
